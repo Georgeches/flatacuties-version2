@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav h2{
+    margin-left: 50px;
+}
+
+.nav{
+    height: 70px;
+    box-shadow: 0px 3px 0px 0px rgba(165, 165, 165, 0.514);
+    display: flex;
+    justify-content: space-between;
+}
+
+.vote-header h1, .leaderboard-header h1{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.vote-body{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.candidate{
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0px 3px 5px 2px rgba(165, 165, 165, 0.514);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.candidate:hover{
+    box-shadow: 2px 7px 7px 7px rgba(165, 165, 165, 0.514);
+    margin-top: -20px;
+}
+
+.texts{
+    text-align: center;
+}
+
+.vs{
+    margin-top: 100px;
+}
+
+.vote-skip{
+    display: grid;
+    place-items: center;
+}
+
+.start-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skip, .start{
+    height: 45px;
+    width: 150px;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.leaderboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.leaderboard-button, .vote-button{
+    margin-top: 10px;
+    margin-right: 30px;
+    height: 45px;
+    width: 200px;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.leaderboard-button:hover, .vote-button:hover, 
+.skip:hover, .start:hover{
+    border: 1px solid rgb(0, 204, 255);
+    background-color: white;
+    color: rgb(0, 204, 255);
+}
+
+.character-div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width:600px){
+    .container{
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+        width: 700px;
+    }
+}
