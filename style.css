@@ -133,7 +133,7 @@
     justify-content: center;
 }
 
-.leaderboard-button, .vote-button, .new-candidate{
+.leaderboard-button, .vote-button, .new-candidate, .back{
     margin-top: 10px;
     margin-right: 30px;
     height: 45px;
@@ -149,7 +149,7 @@
 }
 
 .leaderboard-button:hover, .vote-button:hover, 
-.skip:hover, .start:hover, .new-candidate:hover{
+.skip:hover, .start:hover, .new-candidate:hover, .back:hover{
     border: 1px solid rgb(0, 204, 255);
     background-color: white;
     color: rgb(0, 204, 255);

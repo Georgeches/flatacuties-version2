@@ -9,10 +9,22 @@ $('.vote-skip').hide()
 //Hide new candidate form
 $(".new-candidate-form").hide()
 
+$(".back").hide()
+
 $(".new-candidate").click(function(){
     $(".new-candidate-form").toggle()
     $(".leaderboard").hide()
     $(".vote-section").hide()
+    $(".new-candidate").hide()
+    $(".back").toggle()
+})
+
+$(".back").click(function(){
+    $(".new-candidate-form").hide()
+    $(".leaderboard").hide()
+    $(".vote-section").toggle()
+    $(".new-candidate").toggle()
+    $(".back").toggle()
 })
 
 document.querySelector("form").addEventListener("submit", (e) => {
@@ -180,6 +192,7 @@ function shuffleArray(array) {
         $(".leaderboard").toggle();
         $(".vote-button").toggle();
         $(".new-candidate-form").hide()
+        $(".new-candidate").hide()
         createLeaderBoard()
     });
 
@@ -190,6 +203,7 @@ function shuffleArray(array) {
         $(".leaderboard").hide();
         $(".vote-button").hide();
         $(".new-candidate-form").hide()
+        $(".new-candidate").toggle()
         deleteLeaderBoard()
     });
 
