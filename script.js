@@ -6,38 +6,42 @@ $(".vote-button").hide()
 $('.vote-body').hide()
 $('.vote-skip').hide()
 
+//Hide new candidate form
+$(".new-candidate-form").hide()
+
+$(".new-candidate").click(function(){
+    $(".new-candidate-form").toggle()
+    $(".leaderboard").hide()
+    $(".vote-section").hide()
+})
+
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault()
+    let newCandidate = {
+        name: document.getElementById("name").value,
+        image: document.getElementById("image").value,
+        votes: 0
+    }
+    all_characters.unshift(newCandidate)
+    alert("You have successfully added " + newCandidate.name)
+})
+
 let all_characters = [
     {
       "id": 1,
       "name": "Mr. Cute",
       "image": "https://thumbs.gfycat.com/EquatorialIckyCat-max-1mb.gif",
-      "votes": 6
+      "votes": 0
     },
     {
       "id": 2,
       "name": "Mx. Monkey",
       "image": "https://thumbs.gfycat.com/FatalInnocentAmericanshorthair-max-1mb.gif",
-      "votes": 3
-    },
-    {
-      "id": 3,
-      "name": "Ms. Zebra",
-      "image": "https://media2.giphy.com/media/20G9uNqE3K4dRjCppA/source.gif",
-      "votes": 5
-    },
-    {
-      "id": 4,
-      "name": "Dr. Lion",
-      "image": "http://bestanimations.com/Animals/Mammals/Cats/Lions/animated-lion-gif-11.gif",
-      "votes": 5
-    },
-    {
-      "id": 5,
-      "name": "Mme. Panda",
-      "image": "https://media.giphy.com/media/ALalVMOVR8Qw/giphy.gif",
-      "votes": 3
+      "votes": 0
     }
   ]
+
+  
 
 //Get the html elements
 let candidate1 = document.querySelector('.candidate1')
@@ -175,6 +179,7 @@ function shuffleArray(array) {
         $(".leaderboard-button").hide();
         $(".leaderboard").toggle();
         $(".vote-button").toggle();
+        $(".new-candidate-form").hide()
         createLeaderBoard()
     });
 
@@ -184,6 +189,7 @@ function shuffleArray(array) {
         $(".leaderboard-button").toggle();
         $(".leaderboard").hide();
         $(".vote-button").hide();
+        $(".new-candidate-form").hide()
         deleteLeaderBoard()
     });
 
